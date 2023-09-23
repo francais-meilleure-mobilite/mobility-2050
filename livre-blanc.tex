@@ -1,0 +1,144 @@
+\documentclass[11 pt]{report}
+\usepackage[frenchb]{babel}
+%\usepackage{draftcopy}
+\usepackage{url}
+\usepackage{hyperref}
+%%% eurosym provides \euro
+%\usepackage{eurosym}
+%%% Use \pounds for GBP
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{fullpage}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\pagestyle{empty}
+\parskip=8 pt
+\raggedright
+
+\captionsetup{width=0.8\textwidth, font=small}
+
+% cf. https://www.overleaf.com/learn/latex/Hyperlinks
+% Cf. https://ctan.mirrors.hoobly.com/macros/latex/contrib/hyperref/doc/hyperref-doc.pdf
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Mobilité en 2050 (Les Mobilitains)},
+    pdfauthor={Les Mobilitains},
+    }
+
+% Cf. https://tex.stackexchange.com/questions/68418/chapters-without-the-chapter-text-in-content
+% Cf. https://mirrors.ircam.fr/pub/CTAN/macros/latex/contrib/titlesec/titlesec.pdf  (3.1)
+\titleformat{\chapter}[hang]
+  {\normalfont\Huge\bfseries}{\thechapter{}.}{15pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+\newcommand{\refs}{\textbf{Ressources :}}
+\newcommand{\link}[1]{\texttt{\footnotesize\url{#1}}}
+
+\title{Mobilité 2050}
+\author{Les Mobilitains\\
+\texttt{\footnotesize{contact@mobilitains.fr}}}
+\date{\today}
+
+\newcommand{\theabstract}{%
+    Ce livre blanc aborde frontalement le futur de la mobilité
+    pour les 25 prochaines années. Sa pertinence est claire : changer
+    notre manière de se déplacer nécessite de revoir nos habitudes
+    profondément. Ce défi va au-delà de simples infrastructures comme
+    les trains ou vélos. Il s'agit de remodeler nos idées, d'ajuster nos
+    perceptions du quotidien. Révolutionner la mobilité exige une
+    planification rigoureuse, une construction continue et un
+    accompagnement patient de nos concitoyens à chaque étape.
+
+    \vspace{8pt}
+    Un quart de siècle, c'est une génération. Et en une
+    génération, nous avons le pouvoir de changer.
+}
+
+\makeatletter
+\renewcommand{\maketitle}{
+  \begin{titlepage}
+    \begin{center}
+      \vspace*{1cm}
+      {\Huge\textbf{\@title}} % Title
+
+      \vspace{1mm}
+      {\Large{Nantes Métropole et les Pays de la Loire}} % Subtitle
+
+      \vspace{15mm}
+      {\Large\textbf{\@author}} % Author
+
+      \vspace{8mm}
+      {\large\@date} % Date
+
+      \vspace{20mm}
+      \parbox{.8\textwidth}{\theabstract} % Abstract
+    \end{center}
+  \end{titlepage}
+}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Introduction}
+
+\section*{Une vision pour Nantes et les Pays de la Loire}
+
+Ce livre blanc plonge dans le cœur du sujet de la mobilité sur le
+quart de siècle à venir. La pertinence de ce sujet est indéniable :
+transformer notre mobilité implique une évolution profonde de nos
+habitudes. Modifier ces habitudes est un processus long et
+complexe. Il ne s'agit pas seulement de construire l'avenir avec de
+l'acier et du béton, ni uniquement à travers les trains, les vélos ou
+les batteries. C'est aussi un défi de façonner les idées, de redéfinir
+nos conceptions et d'ajuster nos perceptions de ce que nous
+considérons comme normal. Pour révolutionner la mobilité, il faut
+planifier de manière incessante, construire sans relâche et guider
+patiemment nos concitoyens à chaque étape.
+
+La refonte de notre système de mobilité est un impératif pour
+l'amélioration de notre réalité sociale et pour la justice
+sociale. Elle joue un rôle déterminant dans l'amélioration de la
+qualité de vie à tous les niveaux et renforce le pouvoir
+d'achat. C'est également un enjeu environnemental crucial pour la
+France, où le tiers de notre empreinte carbone est attribué au secteur
+des transports.
+
+Bien que l'impulsion initiale de ce document provienne des discussions
+avec le Comité des Partenaires de Nantes Métropole, les enjeux abordés
+transcendent les compétences purement métropolitaines. Ce livre blanc
+nécessite, et résulte d'ailleurs, d'un dialogue intense et d'une
+collaboration étroite avec des acteurs à tous les niveaux : communal,
+métropolitain, régional et national. Si quelques exceptions sont à
+noter, la majorité de ses recommandations sont pertinentes et
+applicables dans les zones urbaines et les régions de toute la France.
+
+Par ailleurs, la complexité du millefeuille administratif laisse
+fréquemment des zones grises qui ne relèvent de la compétence de
+personne. Nous considérons comme acquis que la métropole, les
+départements, la région, l'État ainsi que les acteurs intermédiaires
+tels que l'Association des Maires de France, collaboreront de concert
+pour progresser.
+
+Un quart de siècle, c'est une génération. Et en une génération, nous
+avons le pouvoir de changer.
+
+
+\input{principes.tex}
+\input{ped-velo.tex}
+\input{tc.tex}
+\input{metropole.tex}
+\input{social.tex}
+\input{conclusion.tex}
+
+
+\end{document}
+
